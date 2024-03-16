@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "*.go", "use": "@now/go", "config": { "command": "go run cmd/main.go" } }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "your-go-app" }
+    ]
+  }
+  
