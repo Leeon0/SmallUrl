@@ -1,7 +1,7 @@
 {
     "version": 2,
     "builds": [
-      { "src": "*.go", "use": "@now/go", "config": { "command": "go get && go run cmd/main.go" } }
+      { "src": "*.go", "use": "@now/go", "config": { "command": "go run cmd/main.go" } }
     ],
     "routes": [
       { "handle": "filesystem" },
