@@ -1,11 +1,9 @@
 {
     "version": 2,
     "builds": [
-      { "src": "*.go", "use": "@now/go", "config": { "command": "go run cmd/main.go" } }
+      { "src": "cmd/main.go", "use": "@now/go" }
     ],
     "routes": [
-      { "handle": "filesystem" },
-      { "src": "/.*", "dest": "main.go" }
+      { "src": "/(.*)", "dest": "cmd/main.go" }
     ]
   }
-  
