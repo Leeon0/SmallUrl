@@ -4,7 +4,7 @@
     { "src": "cmd/main.go", "use": "@vercel/go" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/app" }
+    { "src": "/(.*)", "dest": "/cmd/main.go" }
   ],
   "env": {
     "GO111MODULE": "on"
