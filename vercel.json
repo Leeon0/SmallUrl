@@ -1,4 +1,5 @@
 {
+  "functions": {},
   "builds": [
     { "src": "cmd/main.go", "use": "@vercel/go" }
   ]
