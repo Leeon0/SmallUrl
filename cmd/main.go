@@ -56,8 +56,14 @@ func main() {
 		_ = app.Shutdown()
 	}()
 
-	// serve app
-	if err := app.Listen(":8080"); err != nil {
+	// Lee el puerto de la variable de entorno PORT
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Usa el puerto 8080 si no se proporciona otro puerto
+	}
+
+	// serve app en el puerto proporcionado
+	if err := app.Listen(":" + port); err != nil {
 		log.Panic(err)
 	}
 
