@@ -1,9 +1,19 @@
 {
     "version": 2,
     "builds": [
-      { "src": "cmd/main.go", "use": "@now/go" }
+      {
+        "src": "cmd/main.go",
+        "use": "@now/go",
+        "config": {
+          "maxLambdaSize": "10mb"
+        }
+      }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "cmd/main.go" }
+      {
+        "src": "/.*",
+        "dest": "/cmd/main.go"
+      }
     ]
   }
+  
